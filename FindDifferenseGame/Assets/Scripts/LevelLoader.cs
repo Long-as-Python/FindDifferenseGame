@@ -53,7 +53,7 @@ public class LevelLoader : MonoBehaviour
     {
         for (int i = 0; i < levels[_onGoingLevel].buttons.Length; i++)
         {
-            Instantiate(levels[_onGoingLevel].buttons[i].button, canvas.position + levels[_onGoingLevel].buttons[i].buttonCoords, Quaternion.identity, canvas).onClick.AddListener(ButtonCounter);
+            Instantiate(levels[_onGoingLevel].buttons[i].button, canvas.position + levels[_onGoingLevel].buttons[i].buttonCoords * canvas.lossyScale.x, Quaternion.identity, canvas).onClick.AddListener(ButtonCounter);
         }
     }
 
